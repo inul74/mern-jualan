@@ -73,7 +73,7 @@ export const proofOfCommission = catchAsyncErrors(async (req, res, next) => {
     amount,
     comment,
   });
-  
+
   res.status(201).json({
     success: true,
     message:
