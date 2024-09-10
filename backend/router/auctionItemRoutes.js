@@ -8,6 +8,7 @@ import {
 } from "../controllers/auctionItemController.js";
 import { isAuthenticated, isAuthorized } from "../middlewares/auth.js";
 import express from "express";
+import { trackCommissionStatus } from "../middlewares/trackCommissionStatus.js";
 
 const router = express.Router();
 
@@ -15,6 +16,7 @@ router.post(
   "/create",
   isAuthenticated,
   isAuthorized("Auctioner"),
+  trackCommissionStatus,
   addNewAuctionItem
 );
 router.get("/allitems", getAllItems);
