@@ -39,7 +39,7 @@ const SideDrawer = () => {
         <div className="relative">
           <Link to={"/"}>
             <h4 className="text-2xl font-semibold mb-4">
-              Prime<span className="text-[#D6482b]">Bid</span>
+              Jualan<span className="text-[#D6482b]">Online</span>
             </h4>
           </Link>
           <ul className="flex flex-col gap-3">
@@ -109,7 +109,7 @@ const SideDrawer = () => {
                 </Link>
                 <Link
                   to={"/login"}
-                  className="text-[#DECCBE] bg-transparent border-[#DECCBE] border-2 hover:bg-[#fffefd] hover:text-[#fdba88] font-bold text-xl py-1 px-4 rounded-md"
+                  className="text-[#DECCBE] bg-transparent border-[#DECCBE] border-2 hover:bg-[#fffefd] hover:text-[#f77e76] font-bold text-xl py-1 px-4 rounded-md"
                 >
                   Login
                 </Link>
@@ -180,14 +180,14 @@ const SideDrawer = () => {
           >
             Contact Us
           </Link>
-          <p className="text-stone-500">&copy; PrimeBid, LLC.</p>
+          <p className="text-stone-500">&copy; JualanOnline.</p>
           <p className="text-stone-500">
             Degined By{" "}
             <Link
               to={"/"}
               className="font-semibold hover:text-[#d6482b] hover:transition-all hover:duration-150"
             >
-              Jualan
+              Mkaidev.
             </Link>
           </p>
         </div>
