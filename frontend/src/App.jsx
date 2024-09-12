@@ -8,7 +8,8 @@ import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import SubmitCommission from "./pages/SubmitCommission";
 import { useDispatch } from "react-redux";
-import { fetchUser } from "./store/slices/userSlice";
+import { fetchLeaderboard, fetchUser } from "./store/slices/userSlice";
+import { getAllAuctionItems } from "./store/slices/auctionSlice";
 import HowItWorks from "./pages/HowItWorks";
 import About from "./pages/About";
 import Leaderboard from "./pages/Leaderboard";
@@ -18,6 +19,8 @@ const App = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchUser());
+    dispatch(getAllAuctionItems());
+    dispatch(fetchLeaderboard());
   }, []);
 
   return (
