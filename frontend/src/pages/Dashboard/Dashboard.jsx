@@ -24,6 +24,14 @@ const Dashboard = () => {
     dispatch(clearAllSuperAdminSliceErrors());
   }, []);
 
+  const { user, isAuthenticated } = useSelector((state) => state.user);
+  const navigateTo = useNavigate();
+  useEffect(() => {
+    if (user.role !== "Admin" || !isAuthenticated) {
+      navigateTo("/");
+    }
+  }, [isAuthenticated]);
+
   return (
     <>
       {loading ? (
